@@ -11,4 +11,15 @@ public class App {
    
    }
     
+     public static void main2 (String[] args) {
+        Planeta tierra = new Planeta("Tierra", 3, 200000, 400000, 500000, 1000000, true);
+        Planeta marte = new Planeta(
+            "marte", 4, 15000, 25000, 30000, 800000, true);
+
+        System.out.println(tierra.render());
+        System.out.println(marte.render());
+        
+    }
+        
+    
 }
