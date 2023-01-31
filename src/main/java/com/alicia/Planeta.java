@@ -38,10 +38,9 @@ public class Planeta {
     private double volumenKmCub = 0;
     private int diametro = 0;
     private int distanciaSol = 0;
-    private enum tipoPlaneta {
+    private enum tipolaneta {
         GASEOSO, TERRESTRE, ENANO
     };
-
     private Boolean esObservable = false;
 
     public Planeta(String name, int satelites, double masaKg, double volumenKmCub, int diametro, int distanciaSol,
@@ -113,7 +112,7 @@ public class Planeta {
     }
     
     public void imprimir () {
-        System.out.println("Nombre del planeta = " + nombre
+        System.out.println("Nombre del planeta = " + name
         );
         System.out.println("Cantidad de satelites = " + satelites
         );
@@ -131,14 +130,14 @@ public class Planeta {
         );
     }
 
-    public calcularDensidad() {
+    public double calcularDensidad (double masaKg, double volumenKmCub) {
         return masaKg/volumenKmCub;
         
     }
 
     public Boolean esPlanetaExterior() {
-        int limiteCinturonAsteroides = (149597870 * 3.4);
-        if (distancia>limiteCinturonAsteroides){
+        float limiteCinturonAsteroides = (float) (149597870 * 3.4);
+        if (distanciaSol >limiteCinturonAsteroides){
             return true;
         }else {
             return false;
