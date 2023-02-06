@@ -16,8 +16,8 @@ public class App {
         Planeta marte = new Planeta(
             "marte", 4, 15000, 25000, 30000, 800000, true);
 
-        System.out.println(tierra.render());
-        System.out.println(marte.render());
+        // System.out.println(tierra.render());
+        // System.out.println(marte.render());
         
     }
         
