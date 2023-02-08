@@ -17,4 +17,22 @@ public class CuentaBancariaTest {
 
         assertEquals(100, cuenta.getSaldoCuenta());
     }
+
+    @Test
+    void testGetApellidoTitular() {
+        //Given
+        CuentaBancaria cuenta = new CuentaBancaria("Giaco", "Pepe", "0000-0000-0000-0000-0000", tipoCuenta.AHORROS, 0);
+        //then
+        cuenta.setNombreTitular("Giaco");
+        //expect
+        assertEquals("Giaco", cuenta.setNombreTitular());
+    
+        
+        
+    }
+
+    @Test
+    void testGetNombreTitular() {
+        
+    }
 }
